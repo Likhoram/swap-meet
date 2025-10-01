@@ -14,5 +14,4 @@ class Item:
     def condition_description(self):
         return f"the value of condition is {self.condition}."
     
-  
 

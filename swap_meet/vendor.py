@@ -65,8 +65,7 @@ class Vendor:
         if not list_category:
             return None
 
-        highest_number = 0
-  
+        highest_number = 0  
         for item in list_category:
             if item.condition > highest_number:
                 highest_number = item.condition
@@ -87,9 +86,11 @@ class Vendor:
         if not my_item or not their_item:
             return False
         
-        self.swap_items(self, my_item, their_item)
+        self.swap_items(other_vendor, my_item, their_item)
 
         return True
+    
+    
 
 
         
