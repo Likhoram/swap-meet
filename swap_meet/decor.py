@@ -1,15 +1,22 @@
-class Decor:
-    def __init__(self, id, width=0, length=0):
-        self.id = id
+# import uuid
+from swap_meet.item import Item
+
+class Decor(Item):
+    def __init__(self, id=None, width=0, length=0, condition=0):
+        super().__init__(id, condition)
+        # self.id = id or uuid.uuid4().int
         self.width = width
         self.length = length
+        # self.condition = condition
+        
 
     def get_category(self):
         return "Decor"
     
     def __str__(self):
-        return f"An object of type Item with id {self.id}."
+        return f"An object of type Decor with id {self.id}. It takes up a {self.width} by {self.length} sized space."
 
-# from swap_meet.item import Item
+    # def condition_description(self):
+    #     return f"the value of condition is {self.condition}."
+    
 
-# class Decor(Item):
