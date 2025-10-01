@@ -1,5 +1,5 @@
-import uuid
-from swap_meet.item import Item
+# import uuid
+from .item import Item
 
 class Electronics(Item):
     def __init__(self, id=None, type="Unknown", condition=0):
