@@ -2,7 +2,7 @@ import uuid
 
 class Item:
     def __init__(self, id=None, condition=0):
-        self.id = id or uuid.uuid4().int
+        self.id = id if id is not None else uuid.uuid4().int
         self.condition = condition
 
     def get_category(self):
@@ -13,5 +13,3 @@ class Item:
     
     def condition_description(self):
         return f"the value of condition is {self.condition}."
-    
-
